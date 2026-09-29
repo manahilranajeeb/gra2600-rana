@@ -1,0 +1,210 @@
+h1.hero {font-family:cursive, sans-serif; font-size: 45px;}
+
+p {color: yellow; line-height: 2; font-size:20px; background-color:rgba(213, 147, 48, 0.404);}
+
+h1, h2, h3, h4, h5, h6 {color: brown; font-size:30px; background-color:blanchedalmond}
+
+ul {color: brown; font-size:20px; background-color:transparent; line-height: 2;}
+
+ol {color: green; font-size:20px; background-color:transparent; line-height: 2;}
+
+li {color: green; font-size:20px; background-color: transparent; line-height: 2;}
+
+body {color:cornflowerblue; background-color: black; font-size:larger}
+
+a {color:antiquewhite; font-size:larger; background-color: transparent; text-decoration: underline;}
+
+.hero {
+    background-image: url("../assets/brooklyn.jpeg");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    padding:16px 0px 24px 0px;
+}
+
+.hero h1{
+    padding: 16px 0px;
+    margin-top: 500px;
+    color:red;
+    position: relative;
+    top:40;
+    right:30;
+    bottom:0;
+
+}
+
+.top5-a {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    color:brown;
+    background-color:transparent;
+    
+}
+
+.top5-a a{
+    color:greenyellow;
+    text-decoration: none;
+}
+
+.top5-a a:hover {
+    text-decoration: underline;
+}
+
+.top5-b {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size:20px;
+    color:grey;
+    background-color:transparent;
+    
+}
+
+.top5-b a{
+    color:pink;
+    text-decoration: none;
+}
+
+.top5-b a:hover {
+    text-decoration: underline;
+}
+
+header, nav, main, section, footer, 
+ul, li, h1, h2, p, div {
+    border: 1px dashed rgb(216, 214, 214);
+}
+
+.test-box {
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 40px;
+}
+
+body {
+    margin-left:10%;
+    margin-right:10%;
+    max-width:1400px;
+}
+
+ul.nav-list {
+  border: 2px solid blue;
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+}
+
+ul.nav-list li {
+  border: 2px solid green;
+  padding: 10px 4px;
+}
+
+ul.nav-list li a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.site-header {
+  border: 2px solid red;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.site-header .container {
+  color: antiquewhite;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.site-header nav {
+  grid-column: 2;  
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  grid-column: 1;  
+  font-size: 24px;
+  font-weight: bold;
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.site-header {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+
+ul.nav-list li {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.card{
+  background-color: rgba(60, 60, 60);
+  border: 2px dotted green;
+  color:white;
+  flex: 0 0 250px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.card img{
+  width: 160px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card h4 {
+  margin: 12px 0 6px;
+  font-size: 22px;
+  color:white;
+}
+ 
+.card p {
+  margin: 0 0 12px;
+  line-height: 1.4;
+  color:white
+}
+
+.card button {
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+.grid-demo {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: 20px;
+}
+
+.flex-demo{
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 10px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: green;
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: darkgreen;
+}
