@@ -19,18 +19,18 @@ a {color:antiquewhite; font-size:larger; background-color: transparent; text-dec
     min-height: 500px;
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding:16px 0px 24px 0px;
 }
 
 .hero h1{
-    padding: 16px 0px;
-    margin-top: 500px;
-    color:red;
-    position: relative;
-    top:40;
-    right:30;
-    bottom:0;
+   padding: 16px 24px;
+   margin:0;
+   color:red;
 
 }
 
@@ -68,17 +68,6 @@ a {color:antiquewhite; font-size:larger; background-color: transparent; text-dec
     text-decoration: underline;
 }
 
-header, nav, main, section, footer, 
-ul, li, h1, h2, p, div {
-    border: 1px dashed rgb(216, 214, 214);
-}
-
-.test-box {
-  border: 2px solid #333;
-  padding: 20px;
-  margin: 40px;
-}
-
 body {
     margin-left:10%;
     margin-right:10%;
@@ -86,14 +75,12 @@ body {
 }
 
 ul.nav-list {
-  border: 2px solid blue;
   display: flex;
   gap: 24px;
   list-style-type: none;
 }
 
 ul.nav-list li {
-  border: 2px solid green;
   padding: 10px 4px;
 }
 
@@ -105,33 +92,34 @@ ul.nav-list li a {
 }
 
 .site-header {
-  border: 2px solid red;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .site-header .container {
   color: antiquewhite;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .site-header nav {
-  grid-column: 2;  
   display: flex;
   justify-content: center;
 }
 
 .logo {
-  grid-column: 1;  
   font-size: 24px;
+  white-space: nowrap;
   font-weight: bold;
   color: antiquewhite;
   text-decoration: none;
 }
-
-.site-header {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
 
 ul.nav-list li {
   background-color: rgba(0, 0, 0, 0.5);
@@ -140,7 +128,6 @@ ul.nav-list li {
 
 .card{
   background-color: rgba(60, 60, 60);
-  border: 2px dotted green;
   color:white;
   flex: 0 0 250px;
   box-sizing: border-box;
@@ -207,4 +194,74 @@ ul.nav-list li {
 .button:hover,
 .button:focus {
   background-color: darkgreen;
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu li {
+  color:green;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  padding: 6px 0;
+  background-color: #333333;
+  border-radius: 6px;
+}
+
+.submenu a {
+  padding: 8px 16px;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown:hover .submenu {
+  display: block;
+}
+
+.nav-list a {
+  display: block;
+}
+
+.nav-list a:hover {
+  background-color: #444444;
+}
+
+.nav-list a:focus {
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+
+header {
+  background-color: grey;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
