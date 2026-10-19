@@ -1,6 +1,6 @@
 h1.hero {font-family:cursive, sans-serif; font-size: 45px;}
 
-p {color: yellow; line-height: 2; font-size:20px; background-color:rgba(213, 147, 48, 0.404);}
+p {color: black; line-height: 2; font-size:20px; background-color:rgba(213, 147, 48, 0.404);}
 
 h1, h2, h3, h4, h5, h6 {color: brown; font-size:30px; background-color:blanchedalmond}
 
@@ -10,7 +10,7 @@ ol {color: green; font-size:20px; background-color:transparent; line-height: 2;}
 
 li {color: green; font-size:20px; background-color: transparent; line-height: 2;}
 
-body {color:cornflowerblue; background-color: black; font-size:larger}
+body {color:black; background-color: black; font-size:larger}
 
 a {color:antiquewhite; font-size:larger; background-color: transparent; text-decoration: underline;}
 
@@ -264,4 +264,125 @@ header .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+form {
+  max-width:500px;
+  min-width:300px;
+  margin: auto;
+  border: 5px solid rgb(195, 181, 181);
+  background-color: antiquewhite;
+  padding: 25px 0px 25px 25px;
+}
+ 
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+ 
+input {
+  width: 90%;
+  height: 25px;
+  font-size:20px;
+}
+ 
+textarea {
+  width: 90%;
+}
+ 
+.phone {
+  width: 100px;
+}
+ 
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 10px;
+  width: 50%;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+ 
+button:hover {
+  background-color: #b50067;
+  border-radius: 20px;
+   }
+ 
+ 
+.form-note{
+  margin:0;
+  font-size:16px;
+  line-height: 1.5;
+}
+
+.required{
+  color:red;
+}
+
+form p, form label, form legend {
+  color:black;
+  background-color:transparent;
+}
+
+form p{
+  margin:0;
+  font-size:16px;
+  line-height: 1.5;
+}
+
+fieldset{
+  width: 90%;
+  box-sizing: border-box;
+  margin: 20px 0 0 0;
+  padding: 10px 15px 15px 15px;
+  border-radius: 10px;
+}
+
+legend{
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+fieldset > label {
+  margin-top: 5px;
+}
+
+select {
+    width: 90%;
+    height:35px;
+    font-size:20px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    height:auto;
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.option{
+  display:flex;
+  align-items:center;
+  margin-top:8px;
+}
+
+.option label{
+  display: inline;
+  margin:0;
+  padding:0;
+  line-height: 1.5;
+  font-weight:normal;
+}
+
+input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+  outline: 2px solid red;
+}
+
+input:focus:valid, textarea:focus:valid, select:focus:valid {
+  outline: 2px solid green;
 }

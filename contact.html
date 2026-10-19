@@ -44,13 +44,73 @@
     <h2>Contact Details</h2>
     <ul>
 
-    <li>Name</li>
+    <li>Manahil Rana</li>
 
-    <li>Email</li>
+    <li>manahilnjb@gmail.com</li>
 
-    <li>Phone</li>
+    <li>(347)651-2707</li>
 
-   </ul>
+    </ul>
+
+    <form action="https://formspree.io/f/xnpjrlyw" method="POST" id="contact-form">
+      <p class="form-note"><span class="required">*</span> indicates a required field</p>
+    <p><label for="first-name">First Name <span class="required">*</span></label><input type="text" id="first-name" name="first-name" required minlength="2" maxlength="100"></p>
+
+<p><label for="last-name">Last Name <span class="required">*</span></label><input type="text" id="last-name" name="last-name" required minlength="2" maxlength="100"></p>
+
+<p><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="email" required maxlength="100"></p>
+
+<p><label for="phone">Phone</label><input type="tel" id="phone" name="phone" minlength="10" maxlength="15" placeholder="e.g. 555-123-4567"></p>
+
+
+<fieldset>
+  <legend>Best time to reach me <span class="required">*</span></legend>
+  <label for="best-time">Choose a time</label>
+  <select id="best-time" name="best-time" required>
+    <option value="">Select a time...</option>
+    <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+    <option value="afternoon">Afternoon (12:00 PM - 6:00 PM)</option>
+    <option value="evening">Evening (6:00 PM - 10:00 PM)</option>
+  </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Best way to reach me <span class="required">*</span></legend>
+    <div class="option">
+      <input type="radio" id="way-email" name="best-way" value="email" required>
+      <label for="way-email">Email</label>
+    </div>
+    <div class="option">
+      <input type="radio" id="way-phone" name="best-way" value="phone" required>
+      <label for="way-phone">Phone</label>
+    </div>
+    <div class="option">
+      <input type="radio" id="way-text" name="best-way" value="text" required>
+      <label for="way-text">Text</label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend> Let me know about...</legend>
+    <div class="option">
+      <input type="checkbox" id="about-recipes" name="let-me-know" value="new-recipes">
+      <label for="about-recipes">New Recipes</label>
+    </div>
+    <div class="option">
+      <input type="checkbox" id="about-conversions" name="let-me-know" value="conversion-updates">
+      <label for="about-conversions">Conversion Updates</label>
+    </div>
+    <div class="option">
+      <input type="checkbox" id="about-corrections" name="let-me-know" value="corrections">
+      <label for="about-corrections">Corrections</label>
+    </div>
+  </fieldset>
+
+  <p><label for="message">Message <span class="required">*</span></label><textarea id="message" name="message" rows="6" cols="40" required minlength="10" maxlength="500" placeholder="10 to 500 characters"></textarea></p>
+
+<p><button type="submit">Send Message</button></p>
+
+    </form>  
 
     </main>
 
