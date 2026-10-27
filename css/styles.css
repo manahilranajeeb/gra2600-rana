@@ -386,3 +386,176 @@ input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
 input:focus:valid, textarea:focus:valid, select:focus:valid {
   outline: 2px solid green;
 }
+
+/* ============================================
+   HAMBURGER BUTTON
+   ============================================ */
+ 
+ 
+/* Hide the checkbox itself */
+.hamburger input {
+    display: none;
+}
+ 
+ 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+ 
+ 
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+ 
+ 
+/* --- X state: when checkbox is checked --- */
+ 
+ 
+/* Rotate top line down */
+.hamburger input:checked ~ span:nth-child(2) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+ 
+ 
+/* Hide middle line */
+.hamburger input:checked ~ span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+
+    opacity: 0;
+}
+ 
+ 
+/* Rotate bottom line up */
+.hamburger input:checked ~ span:nth-child(4) {
+}
+ 
+ 
+/* ============================================
+   MEDIA QUERY — MOBILE (max-width: 768px)
+   ============================================ */
+ 
+ 
+@media (max-width: 800px) {
+ 
+ 
+    .hamburger {
+        display: flex;
+        position: absolute;
+
+        top: 20px;
+
+       right: 20px;
+    }
+ 
+ 
+    nav {
+        display: none;
+        width: 100%;
+    }
+ 
+ 
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+
+
+    .container{
+
+                position: relative;
+
+      }
+    }
+
+/* Hide the toggle checkbox for nav menu */
+#nav-toggle {
+    display: none;
+}
+
+/* Animate hamburger lines when menu is open */
+#nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+
+}
+
+/* Hide nav by default on mobile */
+nav {
+    display: none;
+}
+
+/* Show nav when checkbox is checked */
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
+/* Manage mobile menu appearance */
+nav {
+    flex-basis: 100%;
+    width: 50%;
+    background-color: rgb(1, 1, 1);
+}
+
+/* Stack nav links vertically */
+ul.nav-list {
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 15px;
+    gap: 12px;
+    display: flex;
+    list-style-type: none;
+}
+
+/* Manage links appearance */
+
+ul.nav-list li {
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+ul.nav-list li a {
+    color: blue;
+    font-size: 18px;
+}
+header {
+    background-color: transparent;
+}
+
+h1.hero, .hero h1 {
+    font-size: 28px;
+    padding: 10px;
+}
+
+.hero {
+  min-height: 250px;
+}
+
+body {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+
+
+
