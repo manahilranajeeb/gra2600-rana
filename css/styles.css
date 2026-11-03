@@ -1,14 +1,16 @@
 h1.hero {font-family:cursive, sans-serif; font-size: 45px;}
 
-p {color: black; line-height: 2; font-size:20px; background-color:rgba(213, 147, 48, 0.404);}
+p {color: antiquewhite; line-height: 2; font-size:20px; background-color:rgba(213, 147, 48, 0.404);}
 
 h1, h2, h3, h4, h5, h6 {color: brown; font-size:30px; background-color:blanchedalmond}
 
-ul {color: brown; font-size:20px; background-color:transparent; line-height: 2;}
+h3 {font-size:24px;}
 
-ol {color: green; font-size:20px; background-color:transparent; line-height: 2;}
+ul {color: antiquewhite; font-size:20px; background-color:transparent; line-height: 2;}
 
-li {color: green; font-size:20px; background-color: transparent; line-height: 2;}
+ol {color: lightgreen; font-size:20px; background-color:transparent; line-height: 2;}
+
+li {color: lightgreen; font-size:20px; background-color: transparent; line-height: 2;}
 
 body {color:black; background-color: black; font-size:larger}
 
@@ -28,9 +30,11 @@ a {color:antiquewhite; font-size:larger; background-color: transparent; text-dec
 }
 
 .hero h1{
+  font-size: 45px;
    padding: 16px 24px;
    margin:0;
-   color:red;
+   color:white;
+   background-color:rgba(0, 0, 0, 0.6);
 
 }
 
@@ -129,19 +133,18 @@ ul.nav-list li {
 .card{
   background-color: rgba(60, 60, 60);
   color:white;
-  flex: 0 0 250px;
   box-sizing: border-box;
   padding: 15px;
 }
 
 .card img{
-  width: 160px;
-  height: 90px;
+  width: 100%;
+  height: 190px;
   border-radius: 8px;
   object-fit: cover;
 }
 
-.card h4 {
+.card h3 {
   margin: 12px 0 6px;
   font-size: 22px;
   color:white;
@@ -164,7 +167,7 @@ ul.nav-list li {
 
 .grid-demo {
   display: grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -225,7 +228,8 @@ ul.nav-list li {
   position: relative;
 }
 
-.has-dropdown:hover .submenu {
+.has-dropdown:hover .submenu,
+.has-dropdown:focus-within .submenu {
   display: block;
 }
 
@@ -421,24 +425,7 @@ input:focus:valid, textarea:focus:valid, select:focus:valid {
  
 /* --- X state: when checkbox is checked --- */
  
- 
-/* Rotate top line down */
-.hamburger input:checked ~ span:nth-child(2) {
-    transform: translateY(9.5px) rotate(45deg);
-}
- 
- 
-/* Hide middle line */
-.hamburger input:checked ~ span:nth-child(3) {
-    transform: translateY(-9.5px) rotate(-45deg);
 
-    opacity: 0;
-}
- 
- 
-/* Rotate bottom line up */
-.hamburger input:checked ~ span:nth-child(4) {
-}
  
  
 /* ============================================
@@ -459,7 +446,7 @@ input:focus:valid, textarea:focus:valid, select:focus:valid {
     }
  
  
-    nav {
+    .site-header nav {
         display: none;
         width: 100%;
     }
@@ -478,84 +465,84 @@ input:focus:valid, textarea:focus:valid, select:focus:valid {
                 position: relative;
 
       }
+
+    .site-header nav {
+    display: none;
     }
 
-/* Hide the toggle checkbox for nav menu */
-#nav-toggle {
-    display: none;
+    /* Show nav when checkbox is checked */
+    #nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    /* Manage mobile menu appearance */
+    nav {
+        flex-basis: 100%;
+        width: 50%;
+        background-color: rgb(1, 1, 1);
+    }
+
+    /* Stack nav links vertically */
+    ul.nav-list {
+        flex-direction: column;
+        background-color: #1a1a1a;
+        padding: 15px;
+        gap: 12px;
+        display: flex;
+        list-style-type: none;
+    }
+
+    /* Manage links appearance */
+
+    ul.nav-list li {
+      width: 100%;
+      border-bottom: 1px solid #333;
+    }
+
+    ul.nav-list li a {
+        color: antiquewhite;
+        font-size: 18px;
+    }
+    header {
+        background-color: transparent;
+    }
+
+    h1.hero, .hero h1 {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .hero {
+      min-height: 250px;
+    }
+
+    body {
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+    .submenu {
+      display:block;
+      position:static;
+    }
+
+    form{
+      min-width: 0;
+    }
+}
+    
+#nav-toggle{
+  display:none;
 }
 
-/* Animate hamburger lines when menu is open */
 #nav-toggle:checked + .hamburger span:nth-child(1) {
-    transform: translateY(9.5px) rotate(45deg);
+  transform: translateY(9.5px) rotate(45deg);
 }
 
 #nav-toggle:checked + .hamburger span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 #nav-toggle:checked + .hamburger span:nth-child(3) {
-    transform: translateY(-9.5px) rotate(-45deg);
-
+  transform: translateY(-9.5px) rotate(-45deg);
 }
-
-/* Hide nav by default on mobile */
-nav {
-    display: none;
-}
-
-/* Show nav when checkbox is checked */
-#nav-toggle:checked ~ nav {
-    display: block;
-}
-
-/* Manage mobile menu appearance */
-nav {
-    flex-basis: 100%;
-    width: 50%;
-    background-color: rgb(1, 1, 1);
-}
-
-/* Stack nav links vertically */
-ul.nav-list {
-    flex-direction: column;
-    background-color: #1a1a1a;
-    padding: 15px;
-    gap: 12px;
-    display: flex;
-    list-style-type: none;
-}
-
-/* Manage links appearance */
-
-ul.nav-list li {
-  width: 100%;
-  border-bottom: 1px solid #333;
-}
-
-ul.nav-list li a {
-    color: blue;
-    font-size: 18px;
-}
-header {
-    background-color: transparent;
-}
-
-h1.hero, .hero h1 {
-    font-size: 28px;
-    padding: 10px;
-}
-
-.hero {
-  min-height: 250px;
-}
-
-body {
-  margin-left: 3%;
-  margin-right: 3%;
-}
-
-
-
-
-
